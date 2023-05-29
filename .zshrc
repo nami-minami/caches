@@ -2,8 +2,12 @@ prompt="%F{green}%n@%m%f %F{cyan}%~%f $ "
 printf '\e[5 q'
 
 alias python='python3'
+alias pip-update-all="pip list -o | tail -n +3 | awk '{print $1}' | xargs pip install -U"
+
 
 eval "$(/usr/local/bin/brew shellenv)"
+
+
 
 #if [ $TERM != "screen" ]; then
 #    screen
