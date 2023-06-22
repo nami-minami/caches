@@ -49,8 +49,9 @@ endif
 "filetype plugin on
 
 
-
-
+"key
+nnoremap <C-s> :w<CR>
+inoremap <C-s> <C-o>:w<CR>
 
 
 let $CACHE = expand('$HOME/.cache')
