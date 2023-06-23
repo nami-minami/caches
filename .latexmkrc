@@ -1,7 +1,7 @@
 #!/usr/bin/env perl
 
-$latex = 'platex -synctex=1 -halt-on-error -interaction=nonstopmode -file-line-error  %O %S';
-$latex_silent = 'platex -synctex=1 -halt-on-error -interaction=nonstopmode -file-line-error  %O %S';
+$latex = 'platex -halt-on-error -interaction=nonstopmode -file-line-error  %O %S';
+$latex_silent = 'platex -halt-on-error -interaction=nonstopmode -file-line-error  %O %S';
 
 $max_repeat = 5;
 
