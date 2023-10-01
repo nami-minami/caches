@@ -1,0 +1,25 @@
+\usepackage{forarray}
+
+\def\label#1{\gdef\@label{#1}}
+\def\teacher#1{\gdef\@teacher{#1}}
+\def\stunumber#1{\gdef\@stunumber{#1}}
+\def\class#1{\gdef\@class{#1}}
+\def\organization#1{\gdef\@organization{#1}}
+
+
+\renewcommand{\maketitle}{
+    \begin{titlepage}
+        \textgt{\@label \par}
+        \vspace{50mm}
+        \begin{center}
+            {\Large \textgt{研究テーマ} \par}
+            {\Huge \textgt{\@title} \par}
+            \vspace{70mm}
+            \textgt{学籍番号 \@stunumber \par}
+            \textgt{\@organization \par}
+            \textgt{\@class \, \@author \par}
+            \textgt{\@date \par}
+            \textgt{指導教員（主査）: \@teacher}
+        \end{center}
+    \end{titlepage}
+}

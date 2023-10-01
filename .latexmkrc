@@ -1,14 +1,13 @@
 #!/usr/bin/env perl
 
-$latex = 'uplatex -halt-on-error -interaction=nonstopmode -file-line-error  %O %S';
+$latex = 'uplatex -halt-on-error -interaction=nonstopmode -file-line-error %O %S';
 $latex_silent = 'uplatex -halt-on-error -interaction=nonstopmode -file-line-error  %O %S';
 
 $max_repeat = 5;
 
 $pdf_mode = 3;
 
-#pBibTeXを使う(参考文献)
-$bibtex = 'pbibtex %O %S';
+$bibtex = 'upbibtex %O %S';
 
 #Mendexを使う(索引)
 $makeindex = 'mendex %O -o %D %S';
