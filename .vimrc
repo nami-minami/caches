@@ -14,7 +14,7 @@ set shiftwidth=4    "自動挿入インデント幅=4
 set nowrap          "行の折り返し設定-折り返しなし
 set showcmd         "入力中のコマンドを表示
 set backspace=3     "バックスペース有効化
-set virtualedit=onemore
+"set virtualedit=onemore
 
 
 "検索
