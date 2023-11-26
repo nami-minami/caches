@@ -12,6 +12,87 @@ hook_add = '''
 
 [[plugins]]
 repo = 'cohama/lexima.vim'
+hook_add = '''
+    call lexima#add_rule({'char': '$', 'input_after': '$', 'filetype': ['tex', 'plaintex']})
+    call lexima#add_rule({'char': '$', 'at': '\%#\$', 'leave': 1, 'filetype': ['tex', 'plaintex']})
+    call lexima#add_rule({'char': '<BS>', 'at': '\$\%#\$', 'delete': 1, 'filetype': ['tex', 'plaintex']})
+
+
+    call lexima#add_rule({
+        \ 'char': '(',
+        \ 'at': '\\\%#',
+        \ 'input_after': '\)',
+        \ 'filetype': 'tex'
+        \ })
+
+    call lexima#add_rule({
+        \ 'char': '<BS>',
+        \ 'at': '\\(\%#\\)',
+        \ 'delete': 2,
+        \ 'input': '<BS><BS>',
+        \ 'filetype': 'tex'
+        \ })
+
+
+    call lexima#add_rule({
+        \ 'char': '[',
+        \ 'at': '\\\%#',
+        \ 'input_after': '\]',
+        \ 'filetype': 'tex'
+        \ })
+
+    call lexima#add_rule({
+        \ 'char': '<BS>',
+        \ 'at': '\[\%#\\]',
+        \ 'delete': 2,
+        \ 'input': '<BS><BS>',
+        \ 'filetype': 'tex'
+        \ })
+   
+ 
+     call lexima#add_rule({
+        \ 'char': '{',
+        \ 'at': '\\\%#',
+        \ 'input_after': '\}',
+        \ 'filetype': 'tex'
+        \ })
+
+    call lexima#add_rule({
+        \ 'char': '<BS>',
+        \ 'at': '\\{\%#\\}',
+        \ 'delete': 2,
+        \ 'input': '<BS><BS>',
+        \ 'filetype': 'tex'
+        \ })
+
+   
+    call lexima#add_rule({
+        \ 'char': '<CR>',
+        \ 'at': '\\begin{\(\w\+\)\%#}',
+        \ 'leave': '}',
+        \ 'input': '<CR>',
+        \ 'input_after': '<CR>\\end{\1}',
+        \ 'with_submatch': 1,
+        \ 'filetype': 'tex'
+        \ })
+
+    call lexima#add_rule({
+        \ 'char': '{',
+        \ 'at': '\[.*\%#]',
+        \ 'leave': ']',
+        \ 'input': '{',
+        \ 'input_after': '}',
+        \ 'filetype': 'tex'
+        \ })
+
+    call lexima#add_rule({
+        \ 'char': '<CR>',
+        \ 'at': '\(\\documentclass.*{\%#}\|\\usepackage{.*\%#}\)',
+        \ 'leave': '}',
+        \ 'input': '<CR>',
+        \ 'filetype': 'tex'
+        \ })
+'''
 
 
 

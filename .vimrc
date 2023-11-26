@@ -16,6 +16,11 @@ set showcmd         "入力中のコマンドを表示
 set backspace=3     "バックスペース有効化
 "set virtualedit=onemore
 
+"keybinding
+"------------------------------------------------------------------------
+imap <C-h> <BS>
+nnoremap <C-s> :w<CR>
+inoremap <C-s> <C-o>:w<CR>
 
 "検索
 "------------------------------------------------------------------------
@@ -49,9 +54,6 @@ endif
 "filetype plugin on
 
 
-"key
-nnoremap <C-s> :w<CR>
-inoremap <C-s> <C-o>:w<CR>
 
 
 let $CACHE = expand('$HOME/.cache')
