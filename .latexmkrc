@@ -1,18 +1,8 @@
 #!/usr/bin/env perl
 
-$latex = 'uplatex -halt-on-error -interaction=nonstopmode -file-line-error %O %S';
-$latex_silent = 'uplatex -halt-on-error -interaction=nonstopmode -file-line-error  %O %S';
+$lualatex = 'lualatex %O -enable-write18 -halt-on-error -interaction=nonstopmode -file-line-error  %S';
+$pdf_mode = 4;
+$max_repeat = 3;
 
-$max_repeat = 5;
-
-$pdf_mode = 3;
-
-$bibtex = 'upbibtex %O %S';
-
-#Mendexを使う(索引)
-$makeindex = 'mendex %O -o %D %S';
-
-#DVIからPDFへの変換
-$dvipdf = 'dvipdfmx %O -o %D %S';
-
-$pdf_previewer = "open -ga /Applications/Skim.app";
+$pdf_previewer = 'open -ga /Applications/Skim.app';
+$hash_calc_ignore_pattern{'pdf'} = '^/(CreationDate|ModDate|ID) ';
