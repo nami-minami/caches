@@ -3,7 +3,7 @@ set nocompatible    "vimをvi互換モードではなくvimとして使用
 
 filetype plugin indent on   "ファイル種類，インデント設定読み込み
 
-"インデント設定
+"indent
 "------------------------------------------------------------------------
 syntax on           "シンタックスハイライト
 colorscheme default
@@ -11,10 +11,13 @@ set ruler           "右下にカーソル位置を表示
 set number          "行番号を表示
 set tabstop=4       "タブ幅=4
 set shiftwidth=4    "自動挿入インデント幅=4
-set nowrap          "行の折り返し設定-折り返しなし
+set softtabstop=0
+set smarttab
+set wrap          "行の折り返し設定
 set showcmd         "入力中のコマンドを表示
 set backspace=3     "バックスペース有効化
 "set virtualedit=onemore
+set autoindent
 
 "keybinding
 "------------------------------------------------------------------------
@@ -22,40 +25,46 @@ imap <C-h> <BS>
 nnoremap <C-s> :w<CR>
 inoremap <C-s> <C-o>:w<CR>
 
+
+"other settings
+"------------------------------------------------------------------------
+"if has('mac')
+"	augroup chIME
+"		autocmd!
+"		autocmd InsertLeave 
+"	augroup END
+"endif
+
+
+"statusbar
+"------------------------------------------------------------------------
+set laststatus=2
+set statusline=%F  "display file name
+set statusline+=[LOW=%l/%L]  "locate line number
+
+
 "検索
 "------------------------------------------------------------------------
 set hlsearch    "検索結果をハイライト
 set ignorecase  "検索時大文字小文字を区別しない
 set smartcase   "小文字で検索時大文字小文字を無視して検索
 
-"set autoindent
-
-"set list
-
 set wildmenu
 set showcmd
 
-set softtabstop=4
-set expandtab
-set smarttab
 
 set clipboard=unnamed
 
-if has('vim_starting')
-    " 挿入モード時に非点滅の縦棒タイプのカーソル
-    let &t_SI .= "\e[6 q"
-    " ノーマルモード時に非点滅のブロックタイプのカーソル
-    let &t_EI .= "\e[2 q"
-    " 置換モード時に非点滅の下線タイプのカーソル
-    let &t_SR .= "\e[4 q"
-endif
-
-"set filetype----------------------------
-"filetype plugin on
+let &t_SI .= "\e[6 q"    " 挿入モード時に非点滅の縦棒タイプのカーソル
+let &t_EI .= "\e[2 q"    " ノーマルモード時に非点滅のブロックタイプのカーソル
+let &t_SR .= "\e[4 q"    " 置換モード時に非点滅の下線タイプのカーソル
 
 
+"filetype----------------------------
+let g:tex_flavor = "latex"
 
 
+"dein Scripts-----------------------------
 let $CACHE = expand('$HOME/.cache')
 if !isdirectory($CACHE)
   call mkdir($CACHE, 'p')
@@ -72,7 +81,7 @@ if &runtimepath !~# '/dein.vim'
         \ fnamemodify(s:dein_dir, ':p') , '[/\\]$', '', '')
 endif
 
-"dein Scripts-----------------------------
+
 if &compatible
   set nocompatible               " Be iMproved
 endif
