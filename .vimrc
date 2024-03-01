@@ -87,14 +87,14 @@ if &compatible
 endif
 
 " Required:
-set runtimepath+=$HOME/.cache/dein/repos/github.com/Shougo/dein.vim
+set runtimepath+=$HOME/.vim/cache/dein/repos/github.com/Shougo/dein.vim
 
 " Required:
-call dein#begin('$HOME/.cache/dein')
+call dein#begin('$HOME/.vim/cache/dein')
 
 " Let dein manage dein
 " Required:
-call dein#add('$HOME/.cache/dein/repos/github.com/Shougo/dein.vim')
+call dein#add('$HOME/.vim/cache/dein/repos/github.com/Shougo/dein.vim')
 
 " Add or remove your plugins here like this:
 "call dein#add('Shougo/neosnippet.vim')
@@ -104,7 +104,7 @@ call dein#add('$HOME/.cache/dein/repos/github.com/Shougo/dein.vim')
 
 " ~~~ ここからtomlファイルを利用するための設定 ~~~
   " 導入するプラグインを記載したtomlファイルのパスを記載する
-   let s:toml_dir  = expand('$HOME/.cache/dein/dein_toml') 
+   let s:toml_dir  = expand('$HOME/.vim/cache/dein/dein_toml') 
    let s:toml      = s:toml_dir . '/dein.toml'
    let s:lazy_toml = s:toml_dir . '/dein_lazy.toml'
   
@@ -126,7 +126,3 @@ if dein#check_install()
 endif
 
 "End dein Scripts-------------------------
-
-
-
-
