@@ -5,7 +5,7 @@ filetype plugin indent on   "ファイル種類，インデント設定読み込
 
 "indent
 "------------------------------------------------------------------------
-syntax on           "シンタックスハイライト
+syntax enable           "シンタックスハイライト
 colorscheme default
 set ruler           "右下にカーソル位置を表示
 set number          "行番号を表示
@@ -33,6 +33,12 @@ inoremap <C-s> <C-o>:w<CR>
 "		autocmd!
 "		autocmd InsertLeave 
 "	augroup END
+"endif
+
+"macvim
+"------------------------------------------------------------------------
+"if has('gui_macvim')
+"	source ~/.vim/macvim.vim
 "endif
 
 
