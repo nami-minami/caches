@@ -9,6 +9,17 @@ case  `uname -s` in
 			fi
 		done
 		;;
+
+	linux)
+		files=()
+		for file in .*
+		do
+			if [[ $file != '.' && $file != ".." && $file != ".git" &&  $file != "install.sh" && $file != ".config/iterm2" && $file != ".matplotlib" ]]
+			then
+				files+=($file)
+			fi
+		done
+		;;
 esac
 
 echo "${files[@]}"
