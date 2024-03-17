@@ -14,7 +14,12 @@ call ddc#custom#patch_global('sourceOptions', {
 \		'mark': 's-lsp',
 \		'forceCompletionPattern': '\.\w*|:\w*|->\w*',
 \		'sorters': ['sorter_lsp-kind']
-\	}
+\	},
+\   'file': {
+\       'mark': '   file',
+\       'isVolatile': v:true,
+\       'forceCompletionPattern': '\S/\S*'
+\   }
 \})
 
 "call ddc#custom#patch_global('sourceParams', {
