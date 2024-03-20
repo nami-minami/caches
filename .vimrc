@@ -5,19 +5,18 @@ filetype plugin indent on   "ファイル種類，インデント設定読み込
 
 "indent
 "------------------------------------------------------------------------
-syntax enable           "シンタックスハイライト
-colorscheme default
-set ruler           "右下にカーソル位置を表示
-set number          "行番号を表示
-set tabstop=4       "タブ幅=4
-set shiftwidth=4    "自動挿入インデント幅=4
-set softtabstop=0
+syntax enable        
+set ruler            
+set number          
+set expandtab
+set softtabstop=4
+set shiftwidth=4
 set smarttab
 set wrap          "行の折り返し設定
 set showcmd         "入力中のコマンドを表示
 set backspace=3     "バックスペース有効化
 "set virtualedit=onemore
-set autoindent
+"set autoindent
 
 "keybinding
 "------------------------------------------------------------------------
