@@ -1,14 +1,16 @@
 #prompt
 source /usr/local/etc/bash_completion.d/git-prompt.sh
+
 GIT_PS1_SHOWDIRTYSTATE=true
 GIT_PS1_SHOWSTASHSTATE=true
 GIT_PS1_SHOWUNTRACKEDFILES=true
 GIT_PS1_SHOWUPSTREAM=auto
+
 setopt PROMPT_SUBST 
-#PS1='[%n@%m %c$(__git_ps1 " (%s)")]\$ '
 prompt="%F{green}%n@%m%f %F{cyan}%~%f%F{magenta}$(__git_ps1 "(%s)")%f $ "
 
 printf '\e[5 q'
+
 
 #alias
 alias reload="source ~/.zshrc"
