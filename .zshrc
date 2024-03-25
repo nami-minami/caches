@@ -8,7 +8,7 @@ GIT_PS1_SHOWUPSTREAM=auto
 setopt PROMPT_SUBST 
 
 PROMPT='%F{green}%n@%m%f %F{cyan}%~%f%F{magenta} $(__git_ps1 "(%s)")%f $ '
-printf '\e[5 q'
+#printf '\e[5 q'
 
 
 #alias
