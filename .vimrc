@@ -45,7 +45,8 @@ inoremap <C-s> <C-o>:w<CR>
 "------------------------------------------------------------------------
 set laststatus=2
 set statusline=%F  "display file name
-set statusline+=[LOW=%l/%L]  "locate line number
+set statusline+=[LOW=%l/%L]  "current line number
+set statusline+=%c%V
 
 
 "検索
