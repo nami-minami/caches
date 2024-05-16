@@ -1,4 +1,5 @@
-set formatoptions+=mM
+set formatoptions+=amM]w
+set formatoptions-=c
 set textwidth=71
 
 call lexima#add_rule({'char': '$', 'input_after': '$', 'filetype': ['tex', 'plaintex']})
