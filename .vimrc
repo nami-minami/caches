@@ -48,6 +48,7 @@ set laststatus=2
 set statusline=%F  "display file name
 set statusline+=[LOW=%l/%L]  "current line number
 set statusline+=%c%V
+set statusline+=%=[%{skkeleton#mode()}]
 
 
 "検索
