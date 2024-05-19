@@ -12,79 +12,6 @@ hook_add = '''
 
 [[plugins]]
 repo = 'cohama/lexima.vim'
-hook_add = '''
-    call lexima#add_rule({'char': '$', 'input_after': '$', 'filetype': ['tex', 'plaintex']})
-    call lexima#add_rule({'char': '$', 'at': '\%#\$', 'leave': 1, 'filetype': ['tex', 'plaintex']})
-    call lexima#add_rule({'char': '<BS>', 'at': '\$\%#\$', 'delete': 1, 'filetype': ['tex', 'plaintex']})
-
-
-    call lexima#add_rule({
-        \ 'char': '(',
-        \ 'at': '\\\%#',
-        \ 'input_after': '\)',
-        \ 'filetype': 'tex'
-        \ })
-
-    call lexima#add_rule({
-        \ 'char': '<BS>',
-        \ 'at': '\\(\%#\\)',
-        \ 'delete': 2,
-        \ 'input': '<BS><BS>',
-        \ 'filetype': 'tex'
-        \ })
-
-
-    call lexima#add_rule({
-        \ 'char': '[',
-        \ 'at': '\\\%#',
-        \ 'input_after': '\]',
-        \ 'filetype': 'tex'
-        \ })
-
-    call lexima#add_rule({
-        \ 'char': '<BS>',
-        \ 'at': '\[\%#\\]',
-        \ 'delete': 2,
-        \ 'input': '<BS><BS>',
-        \ 'filetype': 'tex'
-        \ })
-   
- 
-     call lexima#add_rule({
-        \ 'char': '{',
-        \ 'at': '\\\%#',
-        \ 'input_after': '\}',
-        \ 'filetype': 'tex'
-        \ })
-
-    call lexima#add_rule({
-        \ 'char': '<BS>',
-        \ 'at': '\\{\%#\\}',
-        \ 'delete': 2,
-        \ 'input': '<BS><BS>',
-        \ 'filetype': 'tex'
-        \ })
-
-   
-    call lexima#add_rule({
-        \ 'char': '<CR>',
-        \ 'at': '\\begin{\(.*\)\%#}',
-        \ 'leave': '}',
-        \ 'input': '<CR>',
-        \ 'input_after': '<CR>\\end{\1}',
-        \ 'with_submatch': 1,
-        \ 'filetype': 'tex'
-        \ })
-
-    
-    call lexima#add_rule({
-        \ 'char': '<CR>',
-        \ 'at': '\(\\documentclass.*{\%#}\|\\usepackage{.*\%#}\)',
-        \ 'leave': '}',
-        \ 'input': '<CR>',
-        \ 'filetype': 'tex'
-        \ })
-'''
 
 [[plugins]]
 repo = "altercation/vim-colors-solarized"
@@ -92,4 +19,20 @@ hook_add = """
 	call togglebg#map("<F5>")	
 	syntax enable
 	colorscheme solarized
+"""
+
+[[plugins]]
+repo = "vim-skk/skkeleton"
+#hook_add = """
+#    call skkeleton#config({ 'globalJisyo': '~/.skk/SKK-JISYO.L' })
+#"""
+hook_add = """
+call skkeleton#config({
+\   'globalDictionaries': ['~/.skk/SKK-JISYO.L']
+\})
+
+call skkeleton#register_kanatable('rom',{
+\   ',': ['，'],
+\   '.': ['．']
+\})
 """
