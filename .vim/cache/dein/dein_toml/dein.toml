@@ -10,8 +10,8 @@ hook_add = '''
     let g:lsp_settings_servers_dir = '~/.local/share/vim-lsp-settings/servers' 
 '''
 
-[[plugins]]
-repo = 'cohama/lexima.vim'
+#[[plugins]]
+#repo = 'cohama/lexima.vim'
 
 [[plugins]]
 repo = "altercation/vim-colors-solarized"
