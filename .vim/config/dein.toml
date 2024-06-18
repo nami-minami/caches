@@ -23,9 +23,6 @@ hook_add = """
 
 [[plugins]]
 repo = "vim-skk/skkeleton"
-#hook_add = """
-#    call skkeleton#config({ 'globalJisyo': '~/.skk/SKK-JISYO.L' })
-#"""
 hook_add = """
 call skkeleton#config({
 \   'globalDictionaries': ['~/.skk/SKK-JISYO.L']
