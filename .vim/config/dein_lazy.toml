@@ -2,7 +2,7 @@
 repo = 'Shougo/ddc.vim'
 on_event = 'InsertEnter'
 depends = ['denops.vim']
-hooks_file = '~/.vim/cache/ddc/ddc.vim'
+hooks_file = '~/.vim/config/ddc.vim'
 
 [[plugins]]
 repo = 'Shougo/ddc-ui-native'
@@ -14,7 +14,8 @@ repo = 'Shougo/ddc-source-lsp'
 on_source = 'ddc.vim'
 
 [[plugins]]
-repo = 'shun/ddc-vim-lsp'
+repo = 'uga-rosa/ddc-source-vsnip'
+depends = ['vim-vsnip']
 on_source = 'ddc.vim'
 
 [[plugins]]
@@ -39,27 +40,7 @@ repo = 'Shougo/ddc-sorter_rank'
 on_source = 'ddc.vim'
 
 
-
 [[plugins]]
 repo = 'cohama/lexima.vim'
 on_event = 'InsertEnter'
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

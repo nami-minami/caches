@@ -3,15 +3,15 @@ repo = 'vim-denops/denops.vim'
 
 [[plugins]]
 repo = 'prabirshrestha/vim-lsp'
+hook_add = '''
+    let g:lsp_text_edit_enabled = 1
+'''
 
 [[plugins]]
 repo = 'mattn/vim-lsp-settings'
 hook_add = '''
     let g:lsp_settings_servers_dir = '~/.local/share/vim-lsp-settings/servers' 
 '''
-
-#[[plugins]]
-#repo = 'cohama/lexima.vim'
 
 [[plugins]]
 repo = "altercation/vim-colors-solarized"
@@ -36,3 +36,5 @@ call skkeleton#register_kanatable('rom',{
 \   '.': ['．']
 \})
 """
+[[plugins]]
+repo = 'hrsh7th/vim-vsnip'
