@@ -4,7 +4,13 @@ repo = 'vim-denops/denops.vim'
 [[plugins]]
 repo = 'prabirshrestha/vim-lsp'
 hook_add = '''
-    let g:lsp_text_edit_enabled = 1
+    function s:client_capabilities(server_info) abort
+        let l:client_capabilities = lsp#default_get_supported_capabilities('a:server_info')
+        let l:client_capabilities['textDocument']['completion']['completionItem']['snippetSupport'] = v:true
+        return l:client_capabilities
+    endfunction
+
+    let g:lsp_get_supported_capabilities = [function('s:client_capabilities')]
 '''
 
 [[plugins]]
@@ -15,11 +21,12 @@ hook_add = '''
 
 [[plugins]]
 repo = "altercation/vim-colors-solarized"
-hook_add = """
-	call togglebg#map("<F5>")	
-	syntax enable
-	colorscheme solarized
-"""
+hook_add = '''
+    call togglebg#map("<F5>")	
+    syntax enable
+    colorscheme solarized
+'''
+
 
 [[plugins]]
 repo = "vim-skk/skkeleton"

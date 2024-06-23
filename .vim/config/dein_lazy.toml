@@ -39,8 +39,12 @@ on_source = 'ddc.vim'
 repo = 'Shougo/ddc-filter-sorter_rank'
 on_source = 'ddc.vim'
 
-
 [[plugins]]
-repo = 'cohama/lexima.vim'
-on_event = 'InsertEnter'
+repo = 'Shougo/ddc-filter-converter_remove_overlap'
+on_source = 'ddc.vim'
+
+
+#[[plugins]]
+#repo = 'cohama/lexima.vim'
+#on_event = 'InsertEnter'
 
