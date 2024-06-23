@@ -5,10 +5,19 @@
 "    autocmd!
 "    autocmd GUIEnter !*.tex set fullscreen
 "augroup END
-augroup RunGUI
-    autocmd!
-    autocmd GUIEnter !*.tex set fullscreen
-augroup END
+
+"function! g:GUIEnter() abort
+"    if &filetype == 'tex'
+"        return
+"    else  
+"       set fullscreen 
+"    endif
+"endfunction
+"
+"augroup RunGUI
+"    autocmd!
+"    autocmd GUIEnter * call g:GUIEnter()
+"augroup END
 
 
 
