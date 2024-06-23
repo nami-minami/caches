@@ -72,9 +72,6 @@ call ddc#custom#patch_global('sourceParams', #{
 \   }
 \})
 
-inoremap <silent><expr><TAB> pumvisible() ? '<C-n>' : '<TAB>'
-inoremap <silent><expr><C-n> pumvisible() ? '<C-n>' : ddc#map#manual_complete()
-inoremap <silent><expr><C-p> pumvisible() ? '<C-p>' : ddc#map#manual_complete()
 
 ""vim-vsnip
 "    " Expand
@@ -93,6 +90,10 @@ inoremap <silent><expr><C-p> pumvisible() ? '<C-p>' : ddc#map#manual_complete()
 
 "imap <C-j> <Plug>(skkeleton-enable)
 "cmap <C-j> <Plug>(skkeleton-enable)
+
+inoremap <silent><expr><TAB> pumvisible() ? '<C-n>' : '<TAB>'
+inoremap <silent><expr><C-n> pumvisible() ? '<C-n>' : ddc#map#manual_complete()
+inoremap <silent><expr><C-p> pumvisible() ? '<C-p>' : ddc#map#manual_complete()
 
 call ddc#enable()
 " }}}
