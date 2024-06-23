@@ -20,17 +20,11 @@ hook_add = '''
 '''
 
 [[plugins]]
-repo = "altercation/vim-colors-solarized"
-hook_add = '''
-    call togglebg#map("<F5>")	
-    syntax enable
-    colorscheme solarized
-'''
-
+repo = 'hrsh7th/vim-vsnip'
 
 [[plugins]]
 repo = "vim-skk/skkeleton"
-hook_add = """
+hook_add = '''
 call skkeleton#config({
 \   'globalDictionaries': ['~/.skk/SKK-JISYO.L']
 \})
@@ -39,6 +33,12 @@ call skkeleton#register_kanatable('rom',{
 \   ',': ['，'],
 \   '.': ['．']
 \})
-"""
+'''
+
 [[plugins]]
-repo = 'hrsh7th/vim-vsnip'
+repo = "altercation/vim-colors-solarized"
+hook_add = '''
+    syntax enable
+    colorscheme solarized
+'''
+

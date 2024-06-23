@@ -1,7 +1,11 @@
 vim9script
 
 #editor 
+set nocompatible
+scriptencoding utf-8
+set encoding=utf-8
 set clipboard=unnamed
+set hidden
 
 
 #indent
