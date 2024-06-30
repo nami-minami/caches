@@ -5,7 +5,7 @@ set formatoptions+=mMB]
 set formatoptions-=c
 set textwidth=71
 
-nmap <buffer> <F5> <Plug>(lsp-document-build)
+nmap <buffer> <F5> <C-o>:w<CR><Plug>(lsp-document-build)
 
 #vim-lsp-settings
 g:texlabBuildSaveFlag = v:true

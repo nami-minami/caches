@@ -87,10 +87,10 @@ let g:terminal_ansi_colors = [
 highlight link Terminal Normal
 
 
-"function s:IMEOff()
-"    "!osascript -e 'tell application "System Events" to key code 102'
-"    !osascript ~/IMEOff.scpt
-"endfunction
+function s:IMEOff()
+    "!osascript -e 'tell application "System Events" to key code 102'
+    !osascript ~/IMEOff.scpt
+endfunction
 
 augroup GUIOnFocus
     autocmd!
