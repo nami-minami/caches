@@ -1,9 +1,9 @@
 vim9script
 
 #editor 
-set nocompatible
-scriptencoding utf-8
+#set nocompatible
 set encoding=utf-8
+scriptencoding utf-8
 set clipboard=unnamed
 set hidden
 
@@ -35,7 +35,7 @@ set wildmenu
 set laststatus=2
 set statusline=%F  #display file name
 set statusline+=[LOW=%l/%L]  #current line number
-set statusline+=%c%V
+set statusline+=%v
 set statusline+=%=[%{skkeleton#mode()}]
 
 
