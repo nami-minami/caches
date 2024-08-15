@@ -2,7 +2,7 @@ vim9script
 
 
 #dein Scripts-----------------------------
-$CACHE = expand('$HOME/.cache')
+$CACHE = expand('~/.cache')
 if !isdirectory($CACHE)
   call mkdir($CACHE, 'p')
 endif
@@ -24,14 +24,14 @@ if &compatible
 endif
 
 # Required:
-set runtimepath+=$HOME/.cache/dein/repos/github.com/Shougo/dein.vim
+set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
 
 # Required:
-call dein#begin('$HOME/.cache/dein')
+call dein#begin('~/.cache/dein')
 
 # Let dein manage dein
 # Required:
-call dein#add('$HOME/.cache/dein/repos/github.com/Shougo/dein.vim')
+call dein#add('~/.cache/dein/repos/github.com/Shougo/dein.vim')
 
 # Add or remove your plugins here like this:
 #call dein#add('Shougo/neosnippet.vim')
@@ -41,7 +41,7 @@ call dein#add('$HOME/.cache/dein/repos/github.com/Shougo/dein.vim')
 
 # ~~~ ここからtomlファイルを利用するための設定 ~~~
   # 導入するプラグインを記載したtomlファイルのパスを記載する
-   var toml_dir = expand('$HOME/.vim/config') 
+   var toml_dir = expand('~/.vim/config') 
    var toml      = toml_dir .. '/dein.toml'
    var lazy_toml = toml_dir .. '/dein_lazy.toml'
   

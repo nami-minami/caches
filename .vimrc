@@ -1,3 +1,3 @@
 vim9script
 
-runtime! config/vimrc/*.vim
+runtime! config/*.vimrc
