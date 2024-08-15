@@ -1,5 +1,8 @@
 [[plugins]]
 repo = 'vim-denops/denops.vim'
+hook_add = '''
+    let g:denops_disable_version_check = 1
+'''
 
 [[plugins]]
 repo = 'prabirshrestha/vim-lsp'
@@ -38,8 +41,8 @@ call skkeleton#register_kanatable('rom',{
 [[plugins]]
 repo = "altercation/vim-colors-solarized"
 hook_add = '''
-        set background=dark
-        syntax enable
-        colorscheme solarized
+    set background=dark
+    syntax enable
+    colorscheme solarized
 '''
 
