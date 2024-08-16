@@ -47,4 +47,3 @@ on_source = 'ddc.vim'
 [[plugins]]
 repo = 'cohama/lexima.vim'
 on_event = 'InsertEnter'
-
