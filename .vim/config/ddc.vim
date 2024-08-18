@@ -1,7 +1,14 @@
 " hook_source {{{
 call ddc#custom#patch_global(#{
-    \   ui: 'native',
-    \   sources: ['skkeleton', 'vsnip', 'lsp', 'shell-native', 'file', 'around'],
+    \   ui: 'pum',
+    \   sources: [
+    \       'skkeleton',
+    \       'vsnip',
+    \       'lsp',
+    \       'shell-native',
+    \       'file',
+    \       'around',
+    \   ],
     \   sourceOptions: #{
     \        _: #{
     \            matchers: ['matcher_head'],
@@ -51,37 +58,6 @@ call ddc#custom#patch_global(#{
     \       }      
     \   }
     \})
-
-function s:TAB_complete_expand_jump() abort
-    if pumvisible()
-        return "\<C-y>"
-    elseif vsnip#jumpable()
-        return "\<Plug>(vsnip-jump-next)"
-    else
-        return "\<TAB>"
-    endif
-    
-endfunction
-
-"ui-native
-inoremap <silent><expr><C-n> pumvisible() ? '<C-n>' : ddc#map#manual_complete()
-inoremap <silent><expr><C-p> pumvisible() ? '<C-p>' : ddc#map#manual_complete()
-
-"vsnip
-imap <silent><expr><TAB> <SID>TAB_complete_expand_jump()
-smap <silent><expr><TAB> <SID>TAB_complete_expand_jump()
-
-"skk
-imap <C-j> <Plug>(skkeleton-enable)
-cmap <C-j> <Plug>(skkeleton-enable)
-
-"imap <C-n> <Plug>(henkanForward)
-"cmap <C-n> <Plug>(henkanForward)
-"imap <C-p> <Plug>(henkanBackward)
-"cmap <C-p> <Plug>(henkanBackward)
-"
-"imap <TAB> <plug>(henkanInput)
-"cmap <TAB> <plug>(henkanInput)
 
 call ddc#enable()
 " }}}
