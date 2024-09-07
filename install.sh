@@ -1,4 +1,4 @@
-case  `uname -s` in 
+case `uname -s` in 
         Darwin)
                 files=()
                 for file in .*
@@ -10,7 +10,7 @@ case  `uname -s` in
                 done
                 ;;
 
-        linux)
+        Linux)
                 files=()
                 for file in .*
                 do
@@ -22,7 +22,7 @@ case  `uname -s` in
                 ;;
 esac
 
-echo "${files[@]}"
+echo ${files[@]}
 
 while true
 do
