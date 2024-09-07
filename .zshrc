@@ -1,5 +1,15 @@
+#==============================================================================
 #prompt
-source /usr/local/etc/bash_completion.d/git-prompt.sh
+#==============================================================================
+case `uname -s` in
+    Darwin)
+        source /usr/local/etc/bash_completion.d/git-prompt.sh
+        ;;
+
+    Linux)
+        source /etc/bash_completion.d/git-prompt
+        ;;
+esac
 
 GIT_PS1_SHOWDIRTYSTATE=true
 GIT_PS1_SHOWSTASHSTATE=true
@@ -11,13 +21,17 @@ PROMPT='%F{green}%n@%m%f %F{cyan}%~%f%F{magenta} $(__git_ps1 "(%s)")%f $ '
 #printf '\e[5 q'
 
 
+#==============================================================================
 #alias
+#==============================================================================
 alias reload="source ~/.zshrc"
 alias ls="ls -G"
 alias 3.12="source ~/.pyenv/3.12/bin/activate"
 
 
+#==============================================================================
 #completion
+#==============================================================================
 autoload -Uz compinit && compinit
 
 
