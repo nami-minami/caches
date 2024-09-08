@@ -20,6 +20,8 @@ setopt PROMPT_SUBST
 PROMPT='%F{green}%n@%m%f %F{cyan}%~%f%F{magenta} $(__git_ps1 "(%s)")%f $ '
 #printf '\e[5 q'
 
+export DENO_INSTALL="/home/nami/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
 
 #==============================================================================
 #alias
