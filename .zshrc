@@ -1,3 +1,4 @@
+bindkey -v
 #==============================================================================
 #prompt
 #==============================================================================
@@ -10,6 +11,10 @@ case `uname -s` in
         source /etc/bash_completion.d/git-prompt
         ;;
 esac
+
+#VIMODE_INSERT=
+#VIMODE_NORMAL=
+#VIMODE_VISUAL=
 
 GIT_PS1_SHOWDIRTYSTATE=true
 GIT_PS1_SHOWSTASHSTATE=true
@@ -40,11 +45,6 @@ alias 3.12="source ~/.pyenv/3.12/bin/activate"
 #==============================================================================
 autoload -Uz compinit && compinit
 
-
-#if [ $TERM != "screen" ]; then
-#    screen
-#fi
-#
 # Installing Znap
 [[ -f ~/.znap/zsh-snap/znap.zsh ]] ||
     git clone --depth 1 -- \
