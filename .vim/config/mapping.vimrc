@@ -1,8 +1,6 @@
 "##############################################################################
 "vim
 "##############################################################################
-
-imap <C-h> <BS>
 nnoremap <C-s> :w<CR>
 inoremap <C-s> <C-o>:w<CR>
 inoremap <C-l> <End>
@@ -15,7 +13,6 @@ vnoremap : ;
 "##############################################################################
 "ddc and source
 "##############################################################################
-
 function s:TAB_complete_or_jump() abort
     if pum#visible()
         return "\<Cmd>call pum#map#confirm()\<CR>"
@@ -32,7 +29,7 @@ function s:S_TAB_complete_or_jump() abort
     elseif vsnip#jumpable(-1)
         return "\<Plug>(vsnip-jump-prev)"
     else
-        return "\<TAB>"
+        return "\<S-TAB>"
     endif
 endfunction
 
@@ -62,3 +59,24 @@ cmap <C-j> <Plug>(skkeleton-enable)
 "
 "imap <TAB> <plug>(henkanInput)
 "cmap <TAB> <plug>(henkanInput)
+
+
+"##############################################################################
+"solarized
+"##############################################################################
+function s:Togglebg() abort
+    if &background == 'dark'
+        set background=light
+    elseif &background == 'light'
+        set background=dark
+    else
+        return
+    endif
+
+    syntax enable
+    colorscheme solarized
+    highlight! link SignColumn Normal
+endfunction
+
+nmap <silent><expr><F12> <SID>Togglebg()
+imap <silent><expr><F12> <SID>Togglebg()<BS>
