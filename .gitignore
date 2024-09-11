@@ -3,3 +3,5 @@
 
 /.matplotlib/*
 !/.matplotlib/matplotlibrc
+
+/.vim/autoload
