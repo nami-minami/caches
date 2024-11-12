@@ -1,4 +1,4 @@
-bindkey -v
+#bindkey -v
 #==============================================================================
 #prompt
 #==============================================================================
@@ -43,7 +43,7 @@ alias 3.12="source ~/.pyenv/3.12/bin/activate"
 #==============================================================================
 #completion
 #==============================================================================
-autoload -Uz compinit && compinit
+autoload -Uz compinit
 
 # Installing Znap
 [[ -f ~/.znap/zsh-snap/znap.zsh ]] ||
@@ -55,3 +55,8 @@ source ~/.znap/zsh-snap/znap.zsh
 # plug install
 znap source zsh-users/zsh-syntax-highlighting
 #znap source marlonrichert/zsh-autocomplete
+
+# >>>> Vagrant command completion (start)
+fpath=(/opt/vagrant/embedded/gems/gems/vagrant-2.4.1/contrib/zsh $fpath)
+compinit
+# <<<<  Vagrant command completion (end)
