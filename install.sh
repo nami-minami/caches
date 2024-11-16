@@ -1,9 +1,10 @@
+#!/bin/bash
 case `uname -s` in 
     Darwin)
         files=()
         for file in .*
         do
-            if [[ $file != '.' && $file != ".." && $file != ".git" &&  $file != "install.sh" ]]
+            if [[ $file != '.' && $file != ".." && $file != ".git" && ".gitignore" &&  $file != "install.sh" ]]
             then
                     files+=($file)
             fi
@@ -14,7 +15,7 @@ case `uname -s` in
         files=()
         for file in .*
         do
-            if [[ $file != '.' && $file != ".." && $file != ".git" &&  $file != "install.sh" && $file != ".config/iterm2" && $file != ".matplotlib" ]]
+            if [[ $file != '.' && $file != ".." && $file != ".git" && ".gitignore" && $file != "install.sh" && $file != ".config/iterm2" && $file != ".matplotlib" ]]
             then
                     files+=($file)
             fi
