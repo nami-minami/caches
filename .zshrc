@@ -4,9 +4,15 @@
 #==============================================================================
 case `uname -s` in
     Darwin)
-        source /usr/local/etc/bash_completion.d/git-prompt.sh
+        case `uname -p` in
+            arm)
+                source /opt/homebrew/etc/bash_completion.d/git-prompt.sh
+                ;;
+            x86_64)
+                source /usr/local/etc/bash_completion.d/git-prompt.sh
+                ;;
+        esac
         ;;
-
     Linux)
         source /etc/bash_completion.d/git-prompt
         ;;
@@ -29,8 +35,6 @@ PROMPT='%F{green}%n@%m%f %F{cyan}%~%f%F{magenta} $(__git_ps1 "(%s)")%f $ '
 #==============================================================================
 #path
 #==============================================================================
-export DENO_INSTALL="/home/nami/.deno"
-export PATH="$DENO_INSTALL/bin:$PATH"
 
 #==============================================================================
 #alias
@@ -55,8 +59,3 @@ source ~/.znap/zsh-snap/znap.zsh
 # plug install
 znap source zsh-users/zsh-syntax-highlighting
 #znap source marlonrichert/zsh-autocomplete
-
-# >>>> Vagrant command completion (start)
-fpath=(/opt/vagrant/embedded/gems/gems/vagrant-2.4.1/contrib/zsh $fpath)
-compinit
-# <<<<  Vagrant command completion (end)
