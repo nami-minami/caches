@@ -62,7 +62,7 @@ map! <S-Insert> <MiddleMouse>
 "endif
 
 
-call togglebg#map("<F2>")
+"call togglebg#map("<F2>")
 
 
 let g:terminal_ansi_colors = [

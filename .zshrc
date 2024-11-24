@@ -42,6 +42,7 @@ PROMPT='%F{green}%n@%m%f %F{cyan}%~%f%F{magenta} $(__git_ps1 "(%s)")%f $ '
 alias reload="source ~/.zshrc"
 alias ls="ls -G"
 alias 3.12="source ~/.pyenv/3.12/bin/activate"
+alias 3.13="source ~/.pyenv/3.13/bin/activate"
 
 
 #==============================================================================
