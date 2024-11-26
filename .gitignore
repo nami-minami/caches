@@ -1,7 +1,9 @@
-/.config/
+/.config/*
+!/.config/git/
+/.config/git/*
 !/.config/git/ignore
 
-/.matplotlib/
+/.matplotlib/*
 !/.matplotlib/matplotlibrc
 
 /.vim/autoload/

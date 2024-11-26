@@ -4,7 +4,7 @@
 #==============================================================================
 case `uname -s` in
     Darwin)
-        case `uname -p` in
+        case `uname -m` in
             arm)
                 source /opt/homebrew/etc/bash_completion.d/git-prompt.sh
                 ;;
