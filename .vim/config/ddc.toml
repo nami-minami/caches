@@ -6,10 +6,6 @@ hooks_file = '~/.vim/config/ddc.vim'
 
 
 #ui
-#[[plugins]]
-#repo = 'Shougo/ddc-ui-native'
-#on_source = 'ddc.vim'
-
 [[plugins]]
 repo = 'Shougo/pum.vim'
 on_source = 'ddc.vim'
