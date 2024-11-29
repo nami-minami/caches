@@ -10,12 +10,22 @@ inoremap <C-l> <End>
 "ddc and source
 "##############################################################################
 function s:TAB_complete_or_jump() abort
-    if pum#visible()
+    "if pum#visible()
+    "    if vsnip#available(1)
+    "        return "\<Plug>(vsnip-expand-or-jump)"
+    "    else
+    "        return "\<Cmd>call pum#map#confirm()\<CR>"
+    "    endif
+    "else
+    "    return "\<TAB>"
+    "endif
+
+    if vsnip#available(1)
+        return "\<Plug>(vsnip-expand-or-jump)"
+    elseif pum#visible()
         return "\<Cmd>call pum#map#confirm()\<CR>"
-    elseif vsnip#jumpable(1)
-        return "\<Plug>(vsnip-jump-next)"
     else
-        return "\<TAB>"
+        return "\<Tab>"
     endif
 endfunction
 

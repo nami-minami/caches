@@ -8,6 +8,7 @@ set clipboard=unnamed
 set hidden
 set signcolumn=yes
 set cursorline
+set completeopt+=longest
 
 
 #indent
