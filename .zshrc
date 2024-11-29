@@ -5,7 +5,7 @@
 case `uname -s` in
     Darwin)
         case `uname -m` in
-            arm)
+            arm64)
                 source /opt/homebrew/etc/bash_completion.d/git-prompt.sh
                 ;;
             x86_64)
