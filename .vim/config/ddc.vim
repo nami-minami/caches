@@ -5,7 +5,8 @@ call ddc#custom#patch_global(#{
     \       'skkeleton',
     \       'vsnip',
     \       'lsp',
-    \       'shell-native',
+    \       'shell',
+    \       'shell_native',
     \       'file',
     \       'around',
     \   ],
@@ -33,7 +34,10 @@ call ddc#custom#patch_global(#{
     \           isVolatile: v:true,
     \           forceCompletionPattern: '\S/\S*'
     \       },
-    \       shell-native: #{
+    \       shell_native: #{
+    \           mark: 'zsh'
+    \       },
+    \       shell: #{
     \           mark: 'shell'
     \       },
     \       skkeleton: #{
@@ -53,7 +57,7 @@ call ddc#custom#patch_global(#{
     \               body -> vsnip#anonymous(body)
     \           })
     \       },
-    \       shell-native: #{
+    \       shell_native: #{
     \           shell: 'zsh'
     \       }      
     \   }

@@ -29,7 +29,7 @@ repo = 'hrsh7th/vim-vsnip'
 repo = "vim-skk/skkeleton"
 hook_add = '''
 call skkeleton#config({
-\   'globalDictionaries': ['~/.skk/SKK-JISYO.L']
+\   'globalDictionaries': ['~/Library/Containers/net.mtgto.inputmethod.macSKK/Data/Documents/Dictionaries/SKK-JISYO.L']
 \})
 
 call skkeleton#register_kanatable('rom',{
