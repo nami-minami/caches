@@ -1,2 +1,4 @@
 [[plugins]]
 repo = 'Shougo/ddu.vim'
+depends = ['denops.vim']
+hooks_file = '~/.vim/config/ddu.ts'
