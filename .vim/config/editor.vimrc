@@ -9,6 +9,7 @@ set hidden
 set signcolumn=yes
 set cursorline
 set completeopt+=longest
+set completeopt+=noinsert
 
 
 #indent
