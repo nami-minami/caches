@@ -13,7 +13,7 @@ call ddc#custom#patch_global(#{
     \   sourceOptions: #{
     \        _: #{
     \            matchers: ['matcher_head'],
-    \            sorters: [],
+    \            sorters: ['sorter_rank'],
     \            converters: ['converter_remove_overlap'],
     \            dup: 'keep'
     \           },
