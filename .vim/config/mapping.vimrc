@@ -9,11 +9,25 @@ inoremap <C-l> <End>
 "##############################################################################
 "ddc and source
 "##############################################################################
+"function s:TAB_complete_or_jump() abort
+"    if vsnip#available(1)
+"        return "\<Plug>(vsnip-expand-or-jump)"
+"    elseif pum#visible()
+"        return "\<Cmd>call pum#map#confirm()\<CR>"
+"    else
+"        return "\<Tab>"
+"    endif
+"endfunction
+
 function s:TAB_complete_or_jump() abort
-    if vsnip#available(1)
-        return "\<Plug>(vsnip-expand-or-jump)"
-    elseif pum#visible()
-        return "\<Cmd>call pum#map#confirm()\<CR>"
+    if pum#visible()
+        if vsnip#expandable()
+            return "\<Plug>(vsnip-expand)"
+        else
+            return "\<Cmd>call pum#map#confirm()\<CR>"
+        endif
+    elseif vsnip#jumpable(1)
+        return "\<Plug>(vsnip-jump-next)"
     else
         return "\<Tab>"
     endif
@@ -36,13 +50,11 @@ inoremap <silent><expr> <C-n> pum#visible() ?
 inoremap <silent><expr> <C-p> pum#visible() ?
     \   '<Cmd>call pum#map#insert_relative(-1)<CR>' : ''
 
-
 "vsnip
 imap <silent><expr><TAB> <SID>TAB_complete_or_jump()
 smap <silent><expr><TAB> <SID>TAB_complete_or_jump()
 imap <silent><expr><S-TAB> <SID>S_TAB_complete_or_jump()
 smap <silent><expr><S-TAB> <SID>S_TAB_complete_or_jump()
-
 
 "skk
 imap <C-j> <Plug>(skkeleton-enable)
