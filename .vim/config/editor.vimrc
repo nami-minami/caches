@@ -10,6 +10,7 @@ set signcolumn=yes
 set cursorline
 set completeopt+=longest
 set completeopt+=noinsert
+set noswapfile
 
 
 #indent
