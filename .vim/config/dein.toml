@@ -14,6 +14,13 @@ hook_add = '''
     endfunction
 
     let g:lsp_get_supported_capabilities = [function('s:client_capabilities')]
+
+    "let g:lsp_hover_echo_empty_message = 0
+
+    "augroup AutoLspHover
+    "    autocmd!
+    "    autocmd CursorHold * LspHover
+    "augroup END
 '''
 
 [[plugins]]
@@ -29,7 +36,7 @@ repo = 'hrsh7th/vim-vsnip'
 repo = "vim-skk/skkeleton"
 hook_add = '''
 call skkeleton#config({
-\   'globalDictionaries': ['~/Library/Containers/net.mtgto.inputmethod.macSKK/Data/Documents/Dictionaries/SKK-JISYO.L']
+\   'globalDictionaries': ['/usr/share/skk/SKK-JISYO.L']
 \})
 
 call skkeleton#register_kanatable('rom',{
@@ -50,8 +57,21 @@ hook_post_update = """
 repo = "altercation/vim-colors-solarized"
 hook_add = '''
     let g:solarized_menu = 0
-    colorscheme solarized
+    "colorscheme solarized
     augroup Solarized
+        autocmd VimEnter * colorscheme solarized
         autocmd ColorScheme solarized highlight! link SignColumn Normal
     augroup END
+
 '''
+if='has("gui_running")'
+
+[[plugins]]
+repo = 'github/copilot.vim'
+hook_add = '''
+    let g:copilot_no_tab_map = v:true
+'''
+
+[[plugins]]
+repo = 'thinca/vim-themis'
+rtp = '/Users/nami/.cache/dein/repos/github.com/thinca/vim-themis/bin/'

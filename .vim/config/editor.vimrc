@@ -8,9 +8,12 @@ set clipboard=unnamed
 set hidden
 set signcolumn=yes
 set cursorline
-set completeopt+=longest
-set completeopt+=noinsert
+#set completeopt+=longest
+#set completeopt+=noinsert
 set noswapfile
+set updatetime=500
+set nofixendofline
+set vb t_vb=
 
 
 #indent

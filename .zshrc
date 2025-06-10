@@ -1,4 +1,8 @@
 #bindkey -v
+setopt no_beep
+setopt interactivecomments
+
+
 #==============================================================================
 #prompt
 #==============================================================================
@@ -35,12 +39,17 @@ PROMPT='%F{green}%n@%m%f %F{cyan}%~%f%F{magenta} $(__git_ps1 "(%s)")%f $ '
 #==============================================================================
 #path
 #==============================================================================
+export PATH=$PATH:$HOME/.cargo/bin
+export PATH=$PATH:$HOME/go/bin
+export PATH=$PATH:$HOME/.cache/dein/repos/github.com/thinca/vim-themis/bin
 
 #==============================================================================
 #alias
 #==============================================================================
 alias reload="source ~/.zshrc"
 alias ls="ls -G"
+alias ll="ls -lG"
+alias la="ls -laG"
 alias 3.12="source ~/.pyenv/3.12/bin/activate"
 alias 3.13="source ~/.pyenv/3.13/bin/activate"
 
@@ -48,7 +57,10 @@ alias 3.13="source ~/.pyenv/3.13/bin/activate"
 #==============================================================================
 #completion
 #==============================================================================
-autoload -Uz compinit
+autoload -Uz compinit && compinit -i
+source <(docker completion zsh) && \
+source <(deno completions zsh) && \
+source <(npm completion zsh) && \
 
 # Installing Znap
 [[ -f ~/.znap/zsh-snap/znap.zsh ]] ||
@@ -60,3 +72,10 @@ source ~/.znap/zsh-snap/znap.zsh
 # plug install
 znap source zsh-users/zsh-syntax-highlighting
 #znap source marlonrichert/zsh-autocomplete
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /home/nami/go/bin/gocomplete go
+
+#==============================================================================
+#environment
+#==============================================================================

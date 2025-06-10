@@ -18,6 +18,10 @@ on_source = 'ddc.vim'
 
 #source
 [[plugins]]
+repo = 'Shougo/ddc-source-copilot'
+on_source = 'ddc.vim'
+
+[[plugins]]
 repo = 'Shougo/ddc-source-lsp'
 on_source = 'ddc.vim'
 

@@ -56,6 +56,10 @@ smap <silent><expr><TAB> <SID>TAB_complete_or_jump()
 imap <silent><expr><S-TAB> <SID>S_TAB_complete_or_jump()
 smap <silent><expr><S-TAB> <SID>S_TAB_complete_or_jump()
 
+"copilot
+imap <silent><script><expr> <C-f> copilot#Accept("\<CR>")
+
+
 "skk
 imap <C-j> <Plug>(skkeleton-enable)
 cmap <C-j> <Plug>(skkeleton-enable)

@@ -20,6 +20,11 @@ call ddc#custom#patch_global(#{
     \       around: #{
     \           mark: 'around'
     \       },
+    \       copilot: #{
+    \           mark: 'copilot',
+    \           matchers: [],
+    \           minAutoCompleteLength: 0
+    \       },
     \       lsp: #{
     \           mark: 'lsp',
     \           forceCompletionPattern: '\.\w*|:\w*|->\w*',     
@@ -50,6 +55,9 @@ call ddc#custom#patch_global(#{
     \       }
     \   },
     \   sourceParams: #{
+    \       copilot: #{
+    \           copilot: 'vim'
+    \       },
     \       lsp: #{
     \           lspEngine: 'vim-lsp',
     \           enableAdditionalTextEdit: v:true,
