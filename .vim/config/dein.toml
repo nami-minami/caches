@@ -1,7 +1,7 @@
 [[plugins]]
 repo = 'vim-denops/denops.vim'
 hook_add = '''
-    let g:denops_disable_version_check = 1
+    "let g:denops_disable_version_check = 1
 '''
 
 [[plugins]]

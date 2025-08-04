@@ -47,3 +47,7 @@ do
             ;;      
 esac
 done
+
+sudo cp build.sh /usr/local/bin
+sudo chmod +x /usr/local/bin/build.sh
+

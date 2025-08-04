@@ -61,6 +61,7 @@ autoload -Uz compinit && compinit -i
 source <(docker completion zsh) && \
 source <(deno completions zsh) && \
 source <(npm completion zsh) && \
+source <(go-licenses completion zsh) && \
 
 # Installing Znap
 [[ -f ~/.znap/zsh-snap/znap.zsh ]] ||

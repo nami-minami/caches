@@ -44,11 +44,25 @@ function s:S_TAB_complete_or_jump() abort
 endfunction
 
 "ui-pum
-inoremap <S-Tab> <Cmd>call pum#map#cancel()<CR>
-inoremap <silent><expr> <C-n> pum#visible() ?
-    \   '<Cmd>call pum#map#insert_relative(+1)<CR>' : ''
-inoremap <silent><expr> <C-p> pum#visible() ?
-    \   '<Cmd>call pum#map#insert_relative(-1)<CR>' : ''
+"inoremap <S-Tab> <Cmd>call pum#map#cancel()<CR>
+"inoremap <silent><expr> <C-n> pum#visible() ?
+"    \   '<Cmd>call pum#map#insert_relative(+1)<CR>' : ''
+"inoremap <silent><expr> <C-p> pum#visible() ?
+"    \   '<Cmd>call pum#map#insert_relative(-1)<CR>' : ''
+imap <C-n>   <Cmd>call pum#map#insert_relative(+1)<CR>
+imap <C-p>   <Cmd>call pum#map#insert_relative(-1)<CR>
+imap <C-y>   <Cmd>call pum#map#confirm()<CR>
+imap <C-e>   <Cmd>call pum#map#cancel()<CR>
+"imap <PageDown> <Cmd>call pum#map#insert_relative_page(+1)<CR>
+"imap <PageUp>   <Cmd>call pum#map#insert_relative_page(-1)<CR>
+"imap <PageDown> <Cmd>call pum#map#scroll_preview(-1)<CR>
+"imap <PageUp> <Cmd>call pum#map#scroll_preview(+1)<CR>
+
+"vim-lsp
+imap <buffer> <expr><PageDown> lsp#scroll(+4)
+imap <buffer> <expr><PageUp> lsp#scroll(-4)
+nmap <buffer> <expr><PageDown> lsp#scroll(+4)
+nmap <buffer> <expr><PageUp> lsp#scroll(-4)
 
 "vsnip
 imap <silent><expr><TAB> <SID>TAB_complete_or_jump()
