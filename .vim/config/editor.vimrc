@@ -4,7 +4,7 @@ vim9script
 #set nocompatible
 set encoding=utf-8
 scriptencoding utf-8
-set clipboard=unnamed
+set clipboard=unnamedplus
 set hidden
 set signcolumn=yes
 set cursorline
@@ -14,6 +14,8 @@ set noswapfile
 set updatetime=500
 set nofixendofline
 set vb t_vb=
+set list
+set listchars=tab:\|_,trail:_,eol:↲,extends:»,precedes:«,nbsp:%
 
 
 #indent
@@ -29,7 +31,6 @@ set smartindent
 set wrap          
 set showcmd         
 set backspace=3     
-#set virtualedit=onemore
 #set autoindent
 
 
@@ -51,9 +52,9 @@ set statusline+=%=[%{skkeleton#mode()}]
 
 #cursor shape
 if has("vim_starting")
-    &t_SI = "\e[6 q"    
-    &t_SR = "\e[4 q"    
-    &t_EI = "\e[2 q"    
+    &t_SI = "\e[6 q"
+    &t_SR = "\e[4 q"
+    &t_EI = "\e[2 q"
 endif
 
 
