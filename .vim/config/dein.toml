@@ -3,6 +3,7 @@ repo = 'vim-denops/denops.vim'
 hook_add = '''
     "let g:denops_disable_version_check = 1
 '''
+rtp = '$HOME/.cargo/bin/deno'
 
 [[plugins]]
 repo = 'prabirshrestha/vim-lsp'
@@ -54,17 +55,19 @@ hook_post_update = """
 
 
 [[plugins]]
-repo = "altercation/vim-colors-solarized"
+repo = 'altercation/vim-colors-solarized'
 hook_add = '''
-    let g:solarized_menu = 0
+    "set background=dark
+    "let g:solarized_menu = 0
+    let g:solarized_underline = 0
+    "let g:solarized_termrans = 1
     "colorscheme solarized
-    augroup Solarized
-        autocmd VimEnter * colorscheme solarized
-        autocmd ColorScheme solarized highlight! link SignColumn Normal
-    augroup END
-
+    "augroup Solarized
+    "    autocmd ColorScheme solarized highlight! link SignColumn Normal
+    "    autocmd VimEnter * colorscheme solarized
+    "augroup END
+    let g:solarized_visibility = 'normal'
 '''
-if='has("gui_running")'
 
 [[plugins]]
 repo = 'github/copilot.vim'

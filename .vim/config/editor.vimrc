@@ -1,6 +1,6 @@
 vim9script
 
-#editor 
+#editor
 #set nocompatible
 set encoding=utf-8
 scriptencoding utf-8
@@ -15,29 +15,32 @@ set updatetime=500
 set nofixendofline
 set vb t_vb=
 set list
-set listchars=tab:\|_,trail:_,eol:↲,extends:»,precedes:«,nbsp:%
+set listchars=tab:\|\-,trail:_,eol:\ ,extends:»,precedes:«,nbsp:%
+#set termguicolors
+set background=dark
+colorscheme solarized
 
 
 #indent
-syntax enable        
-set ruler            
-set number          
+syntax enable
+set ruler
+set number
 set expandtab
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set smarttab
 set smartindent
-set wrap          
-set showcmd         
-set backspace=3     
+set wrap
+set showcmd
+set backspace=3
 #set autoindent
 
 
 #searching
-set hlsearch    
-set ignorecase  
-set smartcase   
+set hlsearch
+set ignorecase
+set smartcase
 
 set wildmenu
 
@@ -59,5 +62,5 @@ endif
 
 
 #filetype
-filetype plugin indent on   
+filetype plugin indent on
 g:tex_flavor = "latex"

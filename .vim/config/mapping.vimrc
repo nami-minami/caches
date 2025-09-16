@@ -59,10 +59,10 @@ imap <C-e>   <Cmd>call pum#map#cancel()<CR>
 "imap <PageUp> <Cmd>call pum#map#scroll_preview(+1)<CR>
 
 "vim-lsp
-imap <buffer> <expr><PageDown> lsp#scroll(+4)
-imap <buffer> <expr><PageUp> lsp#scroll(-4)
-nmap <buffer> <expr><PageDown> lsp#scroll(+4)
-nmap <buffer> <expr><PageUp> lsp#scroll(-4)
+imap <expr><PageDown> lsp#scroll(+4)
+imap <expr><PageUp> lsp#scroll(-4)
+nmap <expr><PageDown> lsp#scroll(+4)
+nmap <expr><PageUp> lsp#scroll(-4)
 
 "vsnip
 imap <silent><expr><TAB> <SID>TAB_complete_or_jump()
@@ -85,6 +85,15 @@ cmap <C-j> <Plug>(skkeleton-enable)
 "
 "imap <TAB> <plug>(henkanInput)
 "cmap <TAB> <plug>(henkanInput)
+
+
+"##############################################################################
+"Vim LSP
+"##############################################################################
+nmap <C-h>  <plug>(lsp-hover)
+nmap <F2> <plug>(lsp-rename)
+nmap <F3> <plug>(lsp-peek-definition)
+nmap <F4> <plug>(lsp-references)
 
 
 "##############################################################################

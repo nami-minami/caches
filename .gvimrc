@@ -9,7 +9,7 @@
 "function! g:GUIEnter() abort
 "    if &filetype == 'tex'
 "        return
-"    else  
+"    else
 "       set fullscreen 
 "    endif
 "endfunction
@@ -23,7 +23,7 @@
 
 " set the X11 font to use
 " set guifont=-misc-fixed-medium-r-normal--14-130-75-75-c-70-iso8859-1
-set guifont=Menlo:h14
+set guifont=Monospace
 
 set ch=2		" Make command line two lines high
 
@@ -87,11 +87,11 @@ let g:terminal_ansi_colors = [
 highlight link Terminal Normal
 
 
-function s:IMEOff()
-    !osascript ~/IMEOff.scpt
-endfunction
-
-augroup GUIOnFocus
-    autocmd!
-    autocmd FocusGained * silent call s:IMEOff()
-augroup End
+"function s:IMEOff()
+"    !osascript ~/IMEOff.scpt
+"endfunction
+"
+"augroup GUIOnFocus
+"    autocmd!
+"    autocmd FocusGained * silent call s:IMEOff()
+"augroup End
