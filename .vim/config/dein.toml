@@ -36,14 +36,22 @@ repo = 'hrsh7th/vim-vsnip'
 [[plugins]]
 repo = "vim-skk/skkeleton"
 hook_add = '''
-call skkeleton#config({
-\   'globalDictionaries': ['/usr/share/skk/SKK-JISYO.L']
-\})
+function s:skkeleton_init() abort
+    call skkeleton#config({
+    \   'globalDictionaries': ['/usr/share/skk/SKK-JISYO.L']
+    \})
+    
+    call skkeleton#register_kanatable('rom',{
+    \   ',': ['，'],
+    \   '.': ['．']
+    \})
+    set statusline+=%=[%{skkeleton#mode()}]
+endfunction
 
-call skkeleton#register_kanatable('rom',{
-\   ',': ['，'],
-\   '.': ['．']
-\})
+augroup skkeleton_init
+    autocmd!
+    autocmd User skkeleton-initialize-pre call s:skkeleton_init()
+augroup END
 '''
 
 

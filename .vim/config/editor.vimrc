@@ -50,7 +50,6 @@ set laststatus=2
 set statusline=%F  #display file name
 set statusline+=[LOW=%l/%L]  #current line number
 set statusline+=%v
-set statusline+=%=[%{skkeleton#mode()}]
 
 
 #cursor shape

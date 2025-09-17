@@ -29,7 +29,7 @@ call ddc#custom#patch_global(#{
     \           mark: 'lsp',
     \           isVolatile: v:true,
     \           forceCompletionPattern: '\.\w*|:\w*|->\w*',     
-    \           sorters: ['sorter_lsp-kind'],
+    \           sorters: ['sorter_lsp_kind'],
     \           converters: ['converter_kind_labels']
     \       },
     \       vsnip: #{
