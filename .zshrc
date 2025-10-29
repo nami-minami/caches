@@ -1,6 +1,8 @@
-#bindkey -v
+# options
 setopt no_beep
 setopt interactivecomments
+setopt GLOB_SUBST
+setopt GLOB_COMPLETE
 
 
 #==============================================================================
@@ -52,6 +54,7 @@ alias ll="ls -lG"
 alias la="ls -laG"
 alias 3.12="source ~/.pyenv/3.12/bin/activate"
 alias 3.13="source ~/.pyenv/3.13/bin/activate"
+alias pysource="source **/bin/activate"
 
 
 #==============================================================================

@@ -27,7 +27,8 @@ hook_add = '''
 [[plugins]]
 repo = 'mattn/vim-lsp-settings'
 hook_add = '''
-    let g:lsp_settings_servers_dir = '~/.local/share/vim-lsp-settings/servers' 
+    let g:lsp_settings_servers_dir         = '~/.local/share/vim-lsp-settings/servers'
+    let g:lsp_settings_global_settings_dir = '~/.vim/config/vim-lsp-settings'
 '''
 
 [[plugins]]

@@ -14,7 +14,7 @@ call ddc#custom#patch_global(#{
     \        _: #{
     \            matchers: ['matcher_head'],
     \            sorters: [],
-    \            converters: ['converter_remove_overlap'],
+    \            converters: [],
     \            dup: 'keep'
     \           },
     \       around: #{
@@ -28,9 +28,9 @@ call ddc#custom#patch_global(#{
     \       lsp: #{
     \           mark: 'lsp',
     \           isVolatile: v:true,
-    \           forceCompletionPattern: '\.\w*|:\w*|->\w*',     
+    \           forceCompletionPattern: '\.\w*|:\w*|->\w*|/\w*',
     \           sorters: ['sorter_lsp_kind'],
-    \           converters: ['converter_kind_labels']
+    \           converters: []
     \       },
     \       vsnip: #{
     \           mark: 'vsnip'
@@ -68,7 +68,7 @@ call ddc#custom#patch_global(#{
     \       },
     \       shell_native: #{
     \           shell: 'zsh'
-    \       }      
+    \       }
     \   }
     \})
 

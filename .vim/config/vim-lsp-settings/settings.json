@@ -1,0 +1,26 @@
+{
+    "pylsp-all":{
+        "workspace_config":{
+            "pylsp": {
+                "configurationSources": ["flake8"],
+                "plugins": {
+                    "flake8": {
+                        "enabled": true,
+                        "ignore": [
+                            "E501"
+                        ]
+                    },
+                    "pycodestyle": {
+                        "enabled": false
+                    },
+                    "mccabe": {
+                        "enabled": false
+                    },
+                    "pyflakes": {
+                        "enabled": false
+                    }
+                }
+            }
+        }
+    }
+}
