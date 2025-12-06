@@ -1,6 +1,18 @@
 {
-    "pylsp-all":{
-        "workspace_config":{
+    "json-language-server": {
+        "workspace_config": {
+            "schemas": [
+                {
+                    "fileMatch": [
+                        "deno.json"
+                    ],
+                    "url": "https://raw.githubusercontent.com/denoland/deno/refs/heads/main/cli/schemas/config-file.v1.json"
+                }
+            ]
+        }
+    },
+    "pylsp-all": {
+        "workspace_config": {
             "pylsp": {
                 "configurationSources": ["flake8"],
                 "plugins": {
