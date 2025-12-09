@@ -55,7 +55,7 @@ call dein#add('~/.cache/dein/repos/github.com/Shougo/dein.vim')
   # ~~~ tomlのための設定はここまで ~~~
 
 # Required:
-filetype plugin indent on   
+filetype plugin indent on
 call dein#end()
 
 

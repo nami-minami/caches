@@ -3,7 +3,7 @@ repo = 'vim-denops/denops.vim'
 hook_add = '''
     "let g:denops_disable_version_check = 1
 '''
-rtp = '$HOME/.cargo/bin/deno'
+#rtp = '$HOME/.cargo/bin/deno'
 
 [[plugins]]
 repo = 'prabirshrestha/vim-lsp'
