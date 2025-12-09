@@ -20,6 +20,13 @@ set listchars=tab:\|\-,trail:_,eol:\ ,extends:»,precedes:«,nbsp:%
 set background=dark
 colorscheme solarized
 
+# terminal
+set termwinsize=15x0
+ augroup TerminalResize
+     autocmd!
+     autocmd TerminalOpen * setlocal winfixheight
+ augroup END
+
 
 #indent
 syntax enable
