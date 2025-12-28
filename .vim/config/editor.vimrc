@@ -4,7 +4,8 @@ vim9script
 #set nocompatible
 set encoding=utf-8
 scriptencoding utf-8
-set clipboard=unnamedplus
+set clipboard+=unnamed
+set clipboard+=unnamedplus
 set hidden
 set signcolumn=yes
 set cursorline
@@ -16,9 +17,9 @@ set nofixendofline
 set vb t_vb=
 set list
 set listchars=tab:\|\-,trail:_,eol:\ ,extends:»,precedes:«,nbsp:%
-#set termguicolors
+set termguicolors
 set background=dark
-colorscheme solarized
+colorscheme solarized8
 
 # terminal
 set termwinsize=15x0

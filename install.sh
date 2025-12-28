@@ -1,5 +1,5 @@
 #!/bin/bash
-case `uname -s` in 
+case `uname -s` in
     Darwin)
         files=()
         for file in .*
@@ -29,7 +29,7 @@ while true
 do
     read -p "Are you sure you want to create symbolic links for the above files in the home directory? [y/N]:" answer
 
-    case "$answer" in 
+    case "$answer" in
         [yY]*)
             for file in "${files[@]}"
             do
@@ -44,7 +44,7 @@ do
 
         *)
             continue
-            ;;      
+            ;;
 esac
 done
 

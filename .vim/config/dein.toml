@@ -41,7 +41,7 @@ function s:skkeleton_init() abort
     call skkeleton#config({
     \   'globalDictionaries': ['/usr/share/skk/SKK-JISYO.L']
     \})
-    
+
     call skkeleton#register_kanatable('rom',{
     \   ',': ['，'],
     \   '.': ['．']
@@ -63,20 +63,35 @@ hook_post_update = """
 """
 
 
+#[[plugins]]
+#repo = 'altercation/vim-colors-solarized'
+#hook_add = '''
+#    "set background=dark
+#    "let g:solarized_menu = 0
+#    "let g:solarized_underline = 0
+#    "let g:solarized_termrans = 1
+#    "colorscheme solarized
+#    "augroup Solarized
+#    "    autocmd ColorScheme solarized highlight! link SignColumn Normal
+#    "    autocmd VimEnter * colorscheme solarized
+#    "augroup END
+#
+#
+#    let g:solarized_visibility = 'normal'
+#    let g:solarized_termcolors = 16
+#    let g:solarized_underline = 0
+#    let g:solarized_termrans = 0
+#
+#    augroup Solarized
+#        autocmd!
+#        autocmd ColorScheme solarized
+#            \   highlight Normal guibg=NONE ctermbg=NONE |
+#            \   highlight! link SignColumn Normal
+#    augroup END
+#'''
+
 [[plugins]]
-repo = 'altercation/vim-colors-solarized'
-hook_add = '''
-    "set background=dark
-    "let g:solarized_menu = 0
-    let g:solarized_underline = 0
-    "let g:solarized_termrans = 1
-    "colorscheme solarized
-    "augroup Solarized
-    "    autocmd ColorScheme solarized highlight! link SignColumn Normal
-    "    autocmd VimEnter * colorscheme solarized
-    "augroup END
-    let g:solarized_visibility = 'normal'
-'''
+repo = 'lifepillar/vim-solarized8'
 
 [[plugins]]
 repo = 'github/copilot.vim'
