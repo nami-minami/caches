@@ -76,6 +76,10 @@ hook_add = '''
     "    autocmd VimEnter * colorscheme solarized
     "augroup END
     let g:solarized_visibility = 'normal'
+
+    augroup Solarized
+        autocmd ColorScheme solarized highlight! link SignColumn Normal
+    augroup END
 '''
 
 [[plugins]]

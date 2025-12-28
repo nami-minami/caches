@@ -24,6 +24,11 @@ call ddu#custom#patch_local('filer', {
     \           'splitDirection': 'topleft',
     \       },
     \   },
+    \   'actionOptions': {
+    \       'open': {
+    \           'quit': v:false,
+    \       },
+    \   },
     \})
 
 call ddu#custom#patch_local('ff', {
@@ -68,12 +73,37 @@ call ddu#custom#patch_local('ff', {
 function! s:ddu_filer_mappings() abort
     nmap <buffer><silent><expr> <CR>
         \   ddu#ui#get_item()->get('isTree', v:false) ?
-        \       "<Cmd>call ddu#ui#do_action('itemAction', {'name': 'narrow'})<CR>" :
-        \       "<Cmd>call ddu#ui#do_action('itemAction', {'name': 'open', 'params': {'command': 'vsplit'}})<CR>"
+        \       "<Cmd>call ddu#ui#do_action('expandItem',
+        \           #{
+        \               mode:
+        \                   'toggle'
+        \           }
+        \       )<CR>" :
+        \       "<Cmd>call ddu#ui#do_action('itemAction',
+        \           #{
+        \               name:'open',
+        \                   params: #{
+        \                       command: 'wincmd p <Bar> drop'
+        \                   }
+        \           }
+        \       )<CR>"
+
+    nmap <buffer><silent> V
+        \   <Cmd>call ddu#ui#do_action('itemAction',
+        \       #{
+        \           name: 'open',
+        \               params: #{
+        \                   command: 'vnew <Bar> wincmd L <Bar> drop'
+        \               }
+        \       }
+        \   )<CR>
+
     nmap <buffer><silent> <Space>
         \   <Cmd>call ddu#ui#do_action('toggleSelectItem')<CR>
+
     nmap <buffer><silent> i
         \   <Cmd>call ddu#ui#do_action('openFilterWindow')<CR>
+
     nmap <buffer><silent> q
         \   <Cmd>call ddu#ui#do_action('quit')<CR>
 endfunction
