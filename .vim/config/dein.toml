@@ -55,6 +55,11 @@ augroup skkeleton_init
 augroup END
 '''
 
+[[plugins]]
+repo = 'matsui54/denops-popup-preview.vim'
+
+[[plugins]]
+repo = 'matsui54/denops-signature_help'
 
 [[plugins]]
 repo = "kat0h/vim-auto-color-switcher"
