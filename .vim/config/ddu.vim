@@ -8,12 +8,12 @@ call ddu#custom#patch_local('filer', {
     \       },
     \   ],
     \   'sourceOptions': {
-    \       '_': {
-    \           'columns': ['filename'],
+    \       'file': {
+    \           'columns': ['icon_filename'],
     \       },
     \   },
     \   'kindOptions': {
-    \       'file': {
+    \       '_': {
     \           'defaultAction': 'open',
     \       },
     \   },
@@ -40,15 +40,17 @@ call ddu#custom#patch_local('ff', {
     \       },
     \       {
     \           'name': 'rg',
-    \               'params': {
-    \                   'input': '',
-    \               },
-    \               'options': {
-    \                   'mathers': [],
-    \                   'volatile': v:true,
-    \               },
+    \           'options': {
+    \               'mathers': [],
+    \               'volatile': v:true,
+    \           },
     \       },
     \   ],
+    \   'sourceParams': {
+    \       'rg': {
+    \           'args': ['--json', '--hidden'],
+    \       },
+    \   },
     \   'sourceOptions': {
     \       '_': {
     \           'matchers': [
@@ -62,6 +64,9 @@ call ddu#custom#patch_local('ff', {
     \       },
     \   },
     \   'uiParams': {
+    \       '_': {
+    \           'displaySourceName': 'long',
+    \       },
     \       'ff': {
     \           'split': 'horizontal',
     \           'ignoreEmpty': v:false,

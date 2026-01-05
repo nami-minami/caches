@@ -6,7 +6,14 @@ setopt GLOB_COMPLETE
 
 
 #==============================================================================
-#prompt
+# keybind
+#=============================================================================
+bindkey -r '^J'
+bindkey -r '^G'
+
+
+#==============================================================================
+# prompt
 #==============================================================================
 case `uname -s` in
     Darwin)
@@ -32,21 +39,22 @@ GIT_PS1_SHOWDIRTYSTATE=true
 GIT_PS1_SHOWSTASHSTATE=true
 GIT_PS1_SHOWUNTRACKEDFILES=true
 GIT_PS1_SHOWUPSTREAM=auto
-setopt PROMPT_SUBST 
+setopt PROMPT_SUBST
 
 PROMPT='%F{green}%n@%m%f %F{cyan}%~%f%F{magenta} $(__git_ps1 "(%s)")%f $ '
 #printf '\e[5 q'
 
 
 #==============================================================================
-#path
+# path
 #==============================================================================
 export PATH=$PATH:$HOME/.cargo/bin
 export PATH=$PATH:$HOME/go/bin
 export PATH=$PATH:$HOME/.cache/dein/repos/github.com/thinca/vim-themis/bin
 
+
 #==============================================================================
-#alias
+# alias
 #==============================================================================
 alias reload="source ~/.zshrc"
 alias ls="ls -G"
@@ -58,7 +66,7 @@ alias pysource="source **/bin/activate"
 
 
 #==============================================================================
-#completion
+# completion
 #==============================================================================
 autoload -Uz compinit && compinit -i
 source <(docker completion zsh) && \
@@ -81,7 +89,7 @@ autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /home/nami/go/bin/gocomplete go
 
 #==============================================================================
-#environment
+# environment
 #==============================================================================
 
 # FVM
