@@ -88,15 +88,3 @@ znap source zsh-users/zsh-syntax-highlighting
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /home/nami/go/bin/gocomplete go
 
-#==============================================================================
-# environment
-#==============================================================================
-
-# FVM
-export PATH="/home/nami/.fvm_flutter/bin:$PATH"
-
-## [Completion]
-## Completion scripts setup. Remove the following line to uninstall
-[[ -f /home/nami/.config/.dart-cli-completion/zsh-config.zsh ]] && . /home/nami/.config/.dart-cli-completion/zsh-config.zsh || true
-## [/Completion]
-
