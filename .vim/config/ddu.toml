@@ -30,8 +30,14 @@ on_source = 'ddu.vim'
 
 
 # filter
+# matcher
 [[plugins]]
 repo = 'Shougo/ddu-filter-matcher_substring'
+on_source = 'ddu.vim'
+
+# sorter
+[[plugins]]
+repo = 'Shougo/ddu-filter-sorter_alpha'
 on_source = 'ddu.vim'
 
 

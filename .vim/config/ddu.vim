@@ -10,6 +10,7 @@ call ddu#custom#patch_local('filer', {
     \   'sourceOptions': {
     \       'file': {
     \           'columns': ['icon_filename'],
+    \           'sorters': ['sorter_alpha'],
     \       },
     \   },
     \   'kindOptions': {
