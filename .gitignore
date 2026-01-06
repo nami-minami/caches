@@ -8,3 +8,6 @@
 !/.matplotlib/matplotlibrc
 
 /.vim/autoload/
+
+.zshrc.zwc
+.zshrc.rc.zwc
