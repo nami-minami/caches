@@ -4,8 +4,7 @@ vim9script
 #set nocompatible
 set encoding=utf-8
 scriptencoding utf-8
-set clipboard+=unnamed
-set clipboard+=unnamedplus
+set clipboard=unnamed,unnamedplus
 set hidden
 set signcolumn=yes
 set cursorline
