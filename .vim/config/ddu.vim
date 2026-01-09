@@ -112,15 +112,39 @@ function! s:ddu_filer_mappings() abort
 
     nmap <buffer><silent> q
         \   <Cmd>call ddu#ui#do_action('quit')<CR>
+
+    nmap <buffer><silent> c
+        \   <Cmd>call ddu#ui#do_action('itemAction', #{ name: 'copy' })<CR>
+
+    nmap <buffer><silent> p
+        \   <Cmd>call ddu#ui#do_action('itemAction', #{ name: 'paste' })<CR>
+
+    nmap <buffer><silent> r
+        \   <Cmd>call ddu#ui#do_action('itemAction', #{ name: 'rename' })<CR>
+
+    nmap <buffer><silent> m
+        \   <Cmd>call ddu#ui#do_action('itemAction', #{ name: 'move' })<CR>
+
+    nmap <buffer><silent> d
+        \   <Cmd>call ddu#ui#do_action('itemAction', #{ name: 'delete' })<CR>
+
+    nmap <buffer><silent> n
+        \   <Cmd>call ddu#ui#do_action('itemAction', #{ name: 'newFile' })<CR>
+
+    nmap <buffer><silent> N
+        \   <Cmd>call ddu#ui#do_action('itemAction', #{ name: 'newDirectory' })<CR>
 endfunction
 
 function! s:ddu_ff_mappings() abort
     nmap <buffer><silent> <CR>
         \   <Cmd>call ddu#ui#do_action('itemAction')<CR>
+
     nmap <buffer><silent> <Space>
         \   <Cmd>call ddu#ui#do_action('toggleSelectItem')<CR>
+
     nmap <buffer><silent> i
         \   <Cmd>call ddu#ui#do_action('openFilterWindow')<CR>
+
     nmap <buffer><silent> q
         \   <Cmd>call ddu#ui#do_action('quit')<CR>
 endfunction
