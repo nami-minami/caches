@@ -11,8 +11,14 @@ fi
     --enable-python3interp \
     --enable-luainterp \
     --enable-rubyinterp \
-    --enable-terminal \
+    --enable-autoservername \
     --enable-multibyte \
+    --enable-nls \
+    --enable-terminal \
     --enable-gui=gtk3 \
-    --with-wayland
+    --enable-gtk3-check \
+    --enable-gnome-check \
+    --with-x \
+    --with-wayland \
+    --with-features=huge
 
