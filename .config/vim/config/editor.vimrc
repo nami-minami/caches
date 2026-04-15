@@ -70,3 +70,9 @@ endif
 #filetype
 filetype plugin indent on
 g:tex_flavor = "latex"
+
+#augroup CheckBlade
+#    autocmd!
+#    autocmd BufNewFile,BufRead *.blade.php set filetype=blade
+#augroup END
+

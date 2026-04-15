@@ -41,12 +41,12 @@ call dein#add('~/.cache/dein/repos/github.com/Shougo/dein.vim')
 
 # ~~~ ここからtomlファイルを利用するための設定 ~~~
   # 導入するプラグインを記載したtomlファイルのパスを記載する
-   var toml_dir = expand('~/.vim/config') 
+   var toml_dir = expand('~/.config/vim/config')
    var toml      = toml_dir .. '/dein.toml'
    var lazy_toml = toml_dir .. '/dein_lazy.toml'
    var ddc_toml = toml_dir .. '/ddc.toml'
    var ddu_toml = toml_dir .. '/ddu.toml'
-  
+
    # tomlファイルをキャッシュしておくための記述
    call dein#load_toml(toml,      {'lazy': 0})
    call dein#load_toml(lazy_toml, {'lazy': 1})

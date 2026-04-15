@@ -3,6 +3,7 @@
 /.config/git/*
 !/.config/git/ignore
 !/.config/wezterm/
+!/.config/vim
 
 /.matplotlib/*
 !/.matplotlib/matplotlibrc

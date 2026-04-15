@@ -18,6 +18,7 @@ fi
     --enable-gui=gtk3 \
     --enable-gtk3-check \
     --enable-gnome-check \
+    --enable-wayland-focus-steal \
     --with-x \
     --with-wayland \
     --with-features=huge

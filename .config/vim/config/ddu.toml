@@ -2,7 +2,7 @@
 repo = 'Shougo/ddu.vim'
 depends = 'denops.vim'
 on_event = 'VimEnter'
-hooks_file = '~/.vim/config/ddu.vim'
+hooks_file = '~/.config/vim/config/ddu.vim'
 
 
 # ui
