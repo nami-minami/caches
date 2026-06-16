@@ -71,7 +71,8 @@ imap <silent><expr><S-TAB> <SID>S_TAB_complete_or_jump()
 smap <silent><expr><S-TAB> <SID>S_TAB_complete_or_jump()
 
 "copilot
-imap <silent><script><expr> <C-f> copilot#Accept("\<CR>")
+imap <C-f> <Plug>(copilot-accept-word)
+imap <silent><script><expr> <C-e> copilot#Accept("\<CR>")
 
 
 "skk
